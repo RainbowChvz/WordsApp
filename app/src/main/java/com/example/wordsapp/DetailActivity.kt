@@ -27,5 +27,8 @@ class DetailActivity : AppCompatActivity() {
 
         val binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val letterId = intent.extras?.getString(WordListFragment.LETTER).toString()
+        title = getString(R.string.detail_prefix) + " " + letterId
     }
 }
