@@ -49,6 +49,9 @@ class LetterListFragment : Fragment() {
             .observe(viewLifecycleOwner) { value ->
                 isLinearLayoutManager = value
                 chooseLayout()
+
+                // Invalidate options menu in order to be redrawn
+                activity?.invalidateOptionsMenu()
             }
     }
 
